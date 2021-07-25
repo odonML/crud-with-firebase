@@ -1,0 +1,51 @@
+<!-- 
+    EJEMPLO 2
+<h3 [class.amarillo]="h1style">Inicio</h3>
+
+<h3 [ngClass]="{
+    'amarillo': h1style
+}">Inicio</h3>
+<h3 [style.color]=" h1style ? 'blue' : 'black' ">Inicio</h3>
+
+<h3 [ngStyle]=" {'color': h1style ? 'blue' : 'black' }">Inicio</h3>
+-->      
+
+ 
+<!-- 
+    EJEMPLO 1
+    <button type="button" class="btn btn-primary mr-1" (dblclick)="doble()">doble click</button>
+    <button type="button" class="btn btn-primary mr-1" (mouseover)="hover()">hover</button>
+    <button type="button" class="btn btn-primary mr-1" (mouseleave)="afuera()">fuera</button>
+    <button type="button" class="btn btn-primary mr-1" (mousedown)="rapido()">hola</button>
+    <button type="button" class="btn btn-primary mr-1" (mouseup)="suelta()">hola</button>
+    <button type="button" class="btn btn-primary mr-1" (click)="uno()">click</button>
+    
+    
+    <ul *ngIf="users">
+        <li *ngFor="let user of users.data">{{user.email}}</li>
+    </ul>
+    
+-->
+<h3>inicio</h3>
+<div class="row">
+    <div class="col-lg-3 mb-3" *ngFor="let user of userList">
+        <div class="card" style="width: 18rem;">
+            <img [src]="user.avatar" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ user.first_name}} {{user.last_name}}</h5>
+              <p class="card-text">{{ user.email}}</p>
+              <a [routerLink]="['info/', user.$key]" class="btn btn-primary">Detalle</a>
+            </div>
+          </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
